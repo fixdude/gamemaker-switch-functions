@@ -38,6 +38,7 @@ switch_show_store(appid); // Returns: N/A - Deltarune is 72199087622348800, for 
 ##### BNVIB (Binary NX Vibration) - This is for the HD Rumble feature
 ```gml
 switch_bnvib_load(file_path);  // Returns: BNVIB Handle // Loads a .bnvib file and returns a handle.
+switch_bnvib_unload(handle); // Returns: N/A
 switch_bnvib_get_length(handle); // Returns: Real 
 switch_bnvib_get_sampling_rate(handle); // Returns: Real
 switch_bnvib_get_is_looping(handle); // Returns: Real
@@ -69,4 +70,18 @@ What the values mean for switch_controller_support_show:
 -3: Unsupported style
 Other values below 0: Unknown
 */
+```
+
+##### Multiplayer related (WIP)
+```gml
+switch_matchmaking_start(argument);
+switch_matchmaking_stop(argument); // Returns: Status (-1 = Failed, supposedly)
+switch_matchmaking_session_create(idk_the_arg_count);
+switch_matchmaking_session_leave(idk_the_arg_count);
+switch_matchmaking_session_find(idk_the_arg_count);
+switch_matchmaking_session_join(idk_the_arg_count);
+switch_matchmaking_session_autojoin(idk_the_arg_count);
+switch_matchmaking_session_close_participation(idk_the_arg_count);
+switch_matchmaking_session_open_participation(idk_the_arg_count);
+switch_matchmaking_session_update_description(idk_the_arg_count);
 ```
